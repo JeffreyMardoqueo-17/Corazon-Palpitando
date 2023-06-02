@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+}
+.corazon{
+    height: 150px;
+    width: 150px;
+    background: red;
+    position: relative;
+    transform: rotate(44deg);
+    box-shadow: -20px 20px 150px red;
+    animation: palpitar 0.5s linear infinite alternate;
+}
+@keyframes palpitar{
+    0%{transform: rotate(45deg) scale(1.10);}
+    80%{transform: rotate(45deg scale(1.0));}
+    100%{transform: rotate(45deg) scale(0.8);}
+}
+@keyframes palpitartex{
+    0%{transform: rotate(0deg) scale(1.10);}
+    80%{transform: rotate(0deg scale(1.0));}
+    100%{transform: rotate(0deg) scale(0.8);}
+}
+.corazon::before{
+    content:  "";
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background: red;
+    right: 50%;
+    border-radius: 50%;
+    box-shadow: 20px 20px 150px #f20044;
+}
+.corazon::after{
+    content:  "";
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background: red;
+    top: -50%;
+    border-radius: 50%;
+    box-shadow: 20px 20px 150px #f20044;
+}
+.texto{
+    position: fixed;
+    margin-bottom: 50px;
+    text-align: center;
+}
+h1{
+    color: aliceblue;
+    animation: palpitartex 0.5s linear infinite alternate;
+}
