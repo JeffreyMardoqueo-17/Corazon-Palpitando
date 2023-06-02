@@ -7,14 +7,14 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #000;
+    background-image: radial-gradient(circle at -4.17% 4.55%, #dfb033 0, #e8a62f 7.14%, #ef9a2e 14.29%, #f68e2f 21.43%, #fb7f32 28.57%, #fe6e36 35.71%, #ff5a3c 42.86%, #ff4242 50%, #fd1f4a 57.14%, #fa0054 64.29%, #f50060 71.43%, #ef006d 78.57%, #e6007c 85.71%, #db008c 92.86%, #cd009d 100%);
 }
 .corazon{
     height: 150px;
     width: 150px;
     background: red;
     position: relative;
-    transform: rotate(44deg);
+    transform: rotate(45deg);
     box-shadow: -20px 20px 150px red;
     animation: palpitar 0.5s linear infinite alternate;
 }
