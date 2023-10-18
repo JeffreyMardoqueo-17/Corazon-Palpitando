@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-height: 100%;
+    color: white;
+}
+html{
+    height:100%;
+}
+/*AREAS*/
+.header{
+    grid-area: "header";
+    background-color: brown;
+}
+.navBar{
+    grid-area: "navbar";
+    background-color: blueviolet;
+}
+.main{
+    grid-area: "main";
+    background-color: blue;
+}
+.sidebar{
+    grid-area: "sidebar";
+    background-color: yellowgreen;
+}
+.footer{
+    grid-area: "footer";
+    background-color: teal;
+}
+.header{
+    grid-area: header;
+}
+.contenedor > *{
+    box-shadow: rgba(4, 47, 117, 0.35) 0px 5px 15px;
+    text-align: center;
+}
+.contenedor{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "main"
+    "sidebar"
+    "footer"
+    ;
+}
+/*Medias para aplicar a posibles pantallas*/
+
+/*Tablet*/
+@media (min-width: 600px) {
+    .contenedor{
+        grid-template:
+        "header header" 100px
+        "navbar navbar" 50px aut
+        "sidebar main" auto
+        "footer footer" 100px /
+        200px    auto
+        ;
+    }
+}
+
+
+/**https://api.thecatapi.com/v1/images/search*7
